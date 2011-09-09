@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'bundler'
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -7,12 +8,12 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'test/unit'
-require 'shoulda'
 
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
-require 'bluepill-hipchat-notifier'
+require 'timecop'
 
-class Test::Unit::TestCase
+require File.expand_path(File.dirname(__FILE__) + '/../lib/bluepill_hipchat_notifier.rb')
+
+RSpec.configure do |config|
+  config.mock_with :rspec
 end
+

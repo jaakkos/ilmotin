@@ -1,6 +1,10 @@
 = bluepill-hipchat-notifier
 
-Description goes here.
+Send you bluepill transitions to HipChat, all to those how hate email notices. :)
+
+== Sample
+
+process.checks :bluepill_hip_chat_notifier, :api_token => "[YOUR TOKEN HERE]", :room_id => [YOUR ROOM ID HERE], :from => "Bluepill - [YOUR HOSTNAME HERE]", :every => 60.seconds
 
 == Contributing to bluepill-hipchat-notifier
  
