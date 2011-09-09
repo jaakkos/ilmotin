@@ -2,7 +2,7 @@ require 'rubygems'
 require 'bluepill'
 require 'hipchat'
 
-class BluepillHipChatNotifier < Bluepill::Trigger
+class ::BluepillHipChatNotifier < Bluepill::Trigger
   PARAMS = [:times, :within, :retry_in, :api_token, :room_id, :from, :notify_users]
   attr_accessor *PARAMS
   
