@@ -3,7 +3,6 @@ require 'ostruct'
 
 module ::Ilmotin
   class Options
-    APPLICATION_COMMANDS = %w(send)
     CLIENT_TYPES = %w(hipchat campfire)
 
     def self.parse(args)
