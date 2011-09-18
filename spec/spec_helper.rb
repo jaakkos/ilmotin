@@ -11,7 +11,8 @@ end
 
 require 'timecop'
 
-require File.expand_path(File.dirname(__FILE__) + '/../lib/bluepill_hipchat_notifier.rb')
+require File.expand_path(File.dirname(__FILE__) + '/../lib/ilmotin.rb')
+
 
 RSpec.configure do |config|
   config.mock_with :rspec

@@ -13,13 +13,14 @@ require 'rake'
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
-  gem.name = "bluepill-hipchat-notifier"
-  gem.homepage = "http://github.com/jaakkos/bluepill-hipchat-notifier"
+  gem.name = "ilmotin"
+  gem.homepage = "http://github.com/jaakkos/ilmotin"
   gem.license = "MIT"
-  gem.summary = %Q{Simple notice tool for sending status changes to HipCat}
-  gem.description = %Q{Simple notice tool for sending status changes to HipCat}
+  gem.summary = %Q{Simple notice tool for sending status changes to any chat}
+  gem.description = %Q{Simple notice tool for sending status changes to chat}
   gem.email = "jaakko@suutarla.com"
   gem.authors = ["Jaakko Suutarla"]
+  gem.executables = ['ilmotin']
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -29,7 +30,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "bluepill-hipchat-notifier #{version}"
+  rdoc.title = "ilmotin #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

@@ -1,12 +1,12 @@
-= bluepill-hipchat-notifier
+= Ilmotin
 
-Send you bluepill transitions to HipChat, all to those how hate email notices. :)
+Send you bluepill transitions to chats, all to those how hate email notices. :)
 
 == Sample
 
-process.checks :bluepill_hip_chat_notifier, :api_token => "[YOUR TOKEN HERE]", :room_id => [YOUR ROOM ID HERE], :from => "Bluepill - [YOUR HOSTNAME HERE]", :every => 60.seconds
+process.checks :ilmotin_bluepill, :api_token => "[YOUR TOKEN HERE]", :room_id => [YOUR ROOM ID HERE], :from => "Bluepill - [YOUR HOSTNAME HERE]", :every => 60.seconds
 
-== Contributing to bluepill-hipchat-notifier
+== Contributing to ilmotin
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it

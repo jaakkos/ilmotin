@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BluepillHipChatNotifier do
+describe Ilmotin::Pill do
   
   before(:each) do
     new_time = Time.local(2008, 9, 1, 12, 0, 0)
@@ -45,14 +45,14 @@ describe BluepillHipChatNotifier do
     
   describe "settings" do
     it "should send notify users" do
-      blue_notifier = BluepillHipChatNotifier.new(fake_process, :api_token => "sample", :room_id => 12345, :from => "Bluepill - sample", :notify_users => true)
+      blue_notifier = Ilmotin::Pill.new(fake_process, :api_token => "sample", :room_id => 12345, :from => "Bluepill - sample", :notify_users => true)
       blue_notifier.stub(:hipchat_client) { hipchatclient }
       blue_notifier.should_receive(:send_message).with(default_message_with_transition, true)
       blue_notifier.notify(change_transition)
     end
     
     it "should not notify users" do
-      blue_notifier = BluepillHipChatNotifier.new(fake_process, :api_token => "sample", :room_id => 12345, :from => "Bluepill - sample", :notify_users => false)
+      blue_notifier = Ilmotin::Pill.new(fake_process, :api_token => "sample", :room_id => 12345, :from => "Bluepill - sample", :notify_users => false)
       blue_notifier.stub(:hipchat_client) { hipchatclient }
       blue_notifier.should_receive(:send_message).with(default_message_with_transition, false)
       blue_notifier.notify(change_transition)      
@@ -63,7 +63,7 @@ describe BluepillHipChatNotifier do
   describe "transitions" do
 
     subject do
-      objekt = BluepillHipChatNotifier.new(fake_process, :api_token => "sample", :room_id => 12345, :from => "Bluepill - sample")
+      objekt = Ilmotin::Pill.new(fake_process, :api_token => "sample", :room_id => 12345, :from => "Bluepill - sample")
       objekt.stub(:hipchat_client) { hipchatclient }
       objekt
     end  

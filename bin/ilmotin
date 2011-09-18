@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require 'ilmotin'
+
+options = Ilmotin::OptionParser.parse(ARGV)
+
+chat_client = eval("Ilmotin::Clients::#{options.client_type}").new(options)
+chat_client.send("hello world")
+
+
+
+
