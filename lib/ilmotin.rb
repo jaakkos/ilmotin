@@ -1,11 +1,8 @@
-require 'rubygems'
-require 'bluepill'
-
-require 'ilmotin/option_parser'
-require 'ilmotin/clients/base'
-require 'ilmotin/clients/hipchat'
-require 'ilmotin/clients/campfire'
-require 'ilmotin/pill'
+require_relative 'ilmotin/options'
+require_relative 'ilmotin/clients/base'
+require_relative 'ilmotin/clients/hipchat'
+require_relative 'ilmotin/clients/campfire'
+require_relative 'ilmotin/pill'
 
 module ::Ilmotin
   def self.VERSION

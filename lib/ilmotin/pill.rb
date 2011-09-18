@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bluepill'
+
 module ::Ilmotin
   class Pill < ::Bluepill::Trigger
     PARAMS = [:times, :within, :retry_in, :api_token, :room_id, :from, :notify_users]
@@ -5,7 +8,6 @@ module ::Ilmotin
   
     def initialize(process, options = {})
       options.reverse_merge!(:times => 5, :within => 1, :retry_in => 5)
-
       options.each_pair do |name, val|
         instance_variable_set("@#{name}", val) if PARAMS.include?(name)
       end

@@ -4,7 +4,7 @@ module Ilmotin::Clients
     base_uri 'http://#{subdomain}.campfirenow.com'
    
     def deliver(message, notify = false)
-      basic_auth @token, 'x'
+      basic_auth token, 'x'
       response = post("/room/#{room_id}/speak.json",
         body:  { body: { message: message, type: 'Textmessage' } } )
       

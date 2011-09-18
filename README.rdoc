@@ -1,8 +1,27 @@
 = Ilmotin
 
-Send you bluepill transitions to chats, all to those how hate email notices. :)
+Send notification to Hipchat or Campfire
 
-== Sample
+== Usage
+
+Usage: ilmotin [options] message
+    -c, --client CLIENT_TYPE         Client types [hipchat ,campfire]
+    -r, --room ROOM_ID               Room id
+    -a, --auth-token AUTH_TOKEN      Authentication Token
+    -f, --from FROM                  Announcer, default Ilmotin (only for hipchat)
+    -n, --notice-users 1||0          Notice all users (only for hipchat)
+    -h, --help                       Show this message
+        --test                       Show settings
+        --version                    Show version
+
+Environment variables:
+    CLIENT_TYPE 		Client type
+    ROOM_ID 			  Room id
+    AUTH_TOKEN			Hipchat auth token
+    FROM			      Set message's from. (just for hipchat)
+    NOTICE_USERS		Notify all users in the room. (just for hipchat)
+
+== with Bluepill
 
 process.checks :ilmotin_bluepill, :api_token => "[YOUR TOKEN HERE]", :room_id => [YOUR ROOM ID HERE], :from => "Bluepill - [YOUR HOSTNAME HERE]", :every => 60.seconds
 
