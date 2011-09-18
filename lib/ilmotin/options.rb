@@ -40,6 +40,9 @@ module ::Ilmotin
           puts opts
           puts 
           puts "Environment variables:"
+          puts
+          puts "    for example export CLIENT_TYPE=hipchat"
+          puts
           puts "    CLIENT_TYPE \t\tClient type"
           puts "    ROOM_ID \t\t\tRoom id"
           puts "    AUTH_TOKEN\t\t\tHipchat auth token"
